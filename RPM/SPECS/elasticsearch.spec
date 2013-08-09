@@ -3,7 +3,7 @@
 
 Name:           elasticsearch
 Version:        0.20.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A distributed, highly available, RESTful search engine
 
 Group:          System Environment/Daemons
@@ -117,6 +117,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Aug 09 2013 Matt Dainty <matt@bodgit-n-scarper.com> - 0.20.6-2
+- Add ulimit call to allow unlimited memory locking
+
 * Fri Aug 09 2013 Matt Dainty <matt@bodgit-n-scarper.com> - 0.20.6
 - Updated to version 0.20.6
 
