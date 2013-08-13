@@ -2,8 +2,8 @@
 %define base_install_dir %{_javadir}{%name}
 
 Name:           elasticsearch
-Version:        0.20.2
-Release:        1%{?dist}
+Version:        0.20.6
+Release:        2%{?dist}
 Summary:        A distributed, highly available, RESTful search engine
 
 Group:          System Environment/Daemons
@@ -15,7 +15,6 @@ Source2:        logrotate.d-elasticsearch
 Source3:        config-logging.yml
 Source4:        sysconfig-elasticsearch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch:      noarch
 
 Requires:       jpackage-utils
 Requires:       java
@@ -118,6 +117,15 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Aug 09 2013 Matt Dainty <matt@bodgit-n-scarper.com> - 0.20.6-2
+- Add ulimit call to allow unlimited memory locking
+
+* Fri Aug 09 2013 Matt Dainty <matt@bodgit-n-scarper.com> - 0.20.6
+- Updated to version 0.20.6
+
+* Wed May 08 2013 Matt Dainty <matt@bodgit-n-scarper.com> - 0.20.5
+- Updated to version 0.20.5
+
 * Sat Jan 19 2013 Richard Pijnenbrug <richard@ispavailability.com> - 0.20.2
 - Updated to version 0.20.2
 - Modified source0 path for elasticsearch
